@@ -1,0 +1,309 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: url("img/home.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background-size: cover;
+
+  color: white;
+  font-family: "Inter", Arial, sans-serif;
+
+  /* Add a background color or image */
+
+  /* Customize the font, size, and color for text*/
+  font-size: 16px;
+
+  /* Adjust the padding and margins */
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+/*
+Style Text: Add style rules for any headings (h1-6),
+paragraphs and links
+*/
+
+h1 {
+  font-weight: 900;
+  font-size: 40px;
+  border: 1px white solid;
+  text-align: center;
+}
+
+h2 {
+}
+
+h3 {
+}
+
+p {
+  padding: 20px 50px;
+}
+
+a {
+  color: chartreuse;
+}
+
+a:link {
+  color: chartreuse;
+}
+
+a:visited {
+  color: aqua;
+}
+
+a:hover {
+  color: darkorange;
+}
+
+a:active {
+  color: deeppink;
+}
+
+/*
+Style Lists: Styles added to the ol or ul style rulesets affect the entire
+list, while styles added to the li style ruleset affect individual list items
+*/
+
+ol {
+}
+
+ol li {
+}
+
+ul {
+}
+
+ul li {
+}
+
+/*
+Style Buttons: Add style rules for any headings (h1-6),
+paragraphs and links
+*/
+
+button {
+  background-color: #008cba;
+  border: none;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 15px 32px;
+  cursor: pointer;
+}
+
+/* Select and style elements by class name or ID */
+
+/* Example: This styles elements with class="header"*/
+.header-container {
+  margin: 0 auto;
+  display: flex;
+  border: 1px red solid;
+  justify-content: center;
+}
+
+.cfa-logo {
+  width: 200px;
+}
+/* Example: This styles an element with an id="header-img" */
+#header-img {
+}
+
+/* Part 1: Navbar */
+
+/* General style rule set for all items in ul */
+.navbar {
+  display: block;
+  height: 50px;
+}
+.navbar ul {
+  list-style: none;
+}
+
+/* Style rule set for individual li */
+.navbar ul li {
+  float: left;
+  margin: 10px;
+}
+
+/* Style rule set for individual li link */
+.navbar ul li a {
+  font-family: Arial;
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* Style rule set for hovered link */
+.navbar ul li a:hover {
+  font-weight: bold;
+}
+
+/* Part 2: Flexbox */
+
+/* General style rule set for flex container */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Style rules for flex-item 1 */
+.flex-item:nth-of-type(1) {
+}
+
+/* Style rules for flex-item 2 */
+.flex-item:nth-of-type(2) {
+}
+
+/* Style rules for flex-item 3 */
+.flex-item:nth-of-type(3) {
+}
+
+/* Style set for all flex-items */
+.flex-item {
+  background: white;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.coding-illustration,
+.coding-girl {
+  width: 300px;
+  display: block;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 50px;
+}
+
+.about-content-container {
+  width: 40%;
+}
+
+.imgs-container {
+  display: flex;
+  margin: 30px 100px;
+  justify-content: space-around;
+}
+
+.each-img-container {
+  margin: 10px;
+  padding: 10px;
+  width: 40%;
+  text-align: center;
+}
+
+.each-img-container img {
+  display: block;
+  margin: 0 auto;
+}
+
+.each-img-container p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.each-img-container .cite {
+  padding: 0;
+  opacity: 50%;
+}
+
+.connect-container {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 50px;
+  height: 120px;
+}
+
+/* .connect-container * {
+  border: 1px blue solid;
+} */
+
+.connect-child-containers {
+  width: 40%;
+}
+
+.connect-container-left {
+  text-align: end;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+/* .connect-container-left * {
+  display: block;
+} */
+
+.connect-content-container-left {
+}
+
+.connect-container-left h2 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.connect-container-left p {
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.connect-container-right button {
+  display: block;
+  width: 40%;
+  height: 50%;
+  margin-right: 5px;
+}
+
+.connect-container-right {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.above-footer {
+  width: 200px;
+  height: 120px;
+  /* background-color: white; */
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 30px;
+  height: 50px;
+  border: 2px cyan solid;
+  display: flex;
+  justify-content: center;
+  background-color: #0b0b0f;
+}
+
+.footer a {
+  display: block;
+}
+
+.footer-content {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
