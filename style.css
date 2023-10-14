@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  background-image: url("img/home.png");
+  background-image: url("img/board.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
 
@@ -42,12 +42,6 @@ h1 {
   text-align: center;
 }
 
-h2 {
-}
-
-h3 {
-}
-
 p {
   padding: 20px 50px;
 }
@@ -73,23 +67,6 @@ a:active {
 }
 
 /*
-Style Lists: Styles added to the ol or ul style rulesets affect the entire
-list, while styles added to the li style ruleset affect individual list items
-*/
-
-ol {
-}
-
-ol li {
-}
-
-ul {
-}
-
-ul li {
-}
-
-/*
 Style Buttons: Add style rules for any headings (h1-6),
 paragraphs and links
 */
@@ -110,15 +87,26 @@ button {
 .header-container {
   margin: 0 auto;
   display: flex;
-  border: 1px red solid;
+  /* border: 1px red solid; */
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  gap: 2%;
 }
 
-.cfa-logo {
-  width: 200px;
+.header-item:nth-of-type(1) {
+  padding: 10px;
 }
-/* Example: This styles an element with an id="header-img" */
-#header-img {
+
+.header-item:nth-of-type(2) {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
 }
 
 /* Part 1: Navbar */
@@ -126,58 +114,45 @@ button {
 /* General style rule set for all items in ul */
 .navbar {
   display: block;
-  height: 50px;
+  margin-bottom: 60px;
+  width: 100%;
 }
+
 .navbar ul {
   list-style: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: #36202b;
+  margin-top: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Style rule set for individual li */
 .navbar ul li {
   float: left;
   margin: 10px;
+  padding: 0.5% 5%;
 }
 
 /* Style rule set for individual li link */
 .navbar ul li a {
   font-family: Arial;
-  color: black;
   font-size: 16px;
   text-decoration: none;
+  display: block;
+  color: white;
+  padding: 5px;
+  flex-wrap: wrap;
 }
 
 /* Style rule set for hovered link */
 .navbar ul li a:hover {
   font-weight: bold;
-}
-
-/* Part 2: Flexbox */
-
-/* General style rule set for flex container */
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-/* Style rules for flex-item 1 */
-.flex-item:nth-of-type(1) {
-}
-
-/* Style rules for flex-item 2 */
-.flex-item:nth-of-type(2) {
-}
-
-/* Style rules for flex-item 3 */
-.flex-item:nth-of-type(3) {
-}
-
-/* Style set for all flex-items */
-.flex-item {
-  background: white;
-  color: black;
-  font-weight: bold;
-  text-align: center;
 }
 
 .coding-illustration,
@@ -218,25 +193,22 @@ button {
   margin-top: 0;
   margin-bottom: 0;
 }
+
 .each-img-container .cite {
   padding: 0;
   opacity: 50%;
 }
 
-.connect-container {
-  /* border: 1px solid red; */
+.header-button-container {
+  width: 70%;
   display: flex;
-  justify-content: flex-start;
-  margin: 20px 50px;
-  height: 120px;
+  justify-content: center;
+  gap: 30px;
 }
 
-/* .connect-container * {
-  border: 1px blue solid;
-} */
-
-.connect-child-containers {
-  width: 40%;
+.header-button {
+  display: block;
+  width: 30%;
 }
 
 .connect-container-left {
@@ -246,13 +218,6 @@ button {
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
-}
-
-/* .connect-container-left * {
-  display: block;
-} */
-
-.connect-content-container-left {
 }
 
 .connect-container-left h2 {
@@ -279,6 +244,11 @@ button {
   padding-left: 20px;
 }
 
+.events-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
 .above-footer {
   width: 200px;
   height: 120px;
@@ -286,11 +256,10 @@ button {
 }
 
 .footer {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 30px;
+  padding: 20px;
   height: 50px;
   border: 2px cyan solid;
   display: flex;
