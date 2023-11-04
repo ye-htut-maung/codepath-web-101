@@ -12,6 +12,7 @@ const sign_now = document.querySelector(".signatures");
 const input_name = document.querySelector("#name");
 const input_hometown = document.querySelector("#hometown");
 const input_email = document.querySelector("#email");
+const submit_sign_now_btn = document.querySelector("#sign-now-button");
 
 // Add your query for the sign now button here
 
@@ -31,3 +32,4 @@ const addSignature = () => {
 };
 
 // Add a click event listener to the sign now button here
+submit_sign_now_btn.addEventListener("click", addSignature);
