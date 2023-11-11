@@ -140,6 +140,7 @@ button {
   padding: 10px;
   display: flex;
   justify-content: center;
+  z-index: 10;
 }
 
 /* Style rule set for individual li */
@@ -315,4 +316,18 @@ button {
   border-width: 2px;
   border-color: red;
   background: pink;
+}
+
+/*  */
+
+.revealable {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.active {
+  transform: translateY(0px);
+  opacity: 1;
 }
