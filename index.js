@@ -9,25 +9,17 @@ const toggleLightMode = () => {
 themeButton.addEventListener("click", toggleLightMode);
 
 const sign_now = document.querySelector(".signatures");
-const input_name = document.querySelector("#name");
-const input_hometown = document.querySelector("#hometown");
-const input_email = document.querySelector("#email");
+// const input_name = document.querySelector("#name");
+// const input_hometown = document.querySelector("#hometown");
+// const input_email = document.querySelector("#email");
 const signNowButton = document.querySelector("#sign-now-button");
 
 // Add your query for the sign now button here
 
-const addSignature = () => {
+const addSignature = (person) => {
   // Write your code to manipulate the DOM here
-  let name_value = input_name.value;
-  console.log(name_value);
-  let hometown_value = input_hometown.value;
-  console.log(hometown_value);
-  let email_value = input_email.value;
-  console.log(email_value);
-
   let txt = document.createElement("p");
-  txt.innerText =
-    "🖊️ " + name_value + " from " + hometown_value + " supports this.";
+  txt.innerHTML = `🖊️ ${person.name} from ${person.hometown} supports this.`;
   sign_now.appendChild(txt);
 };
 
@@ -40,8 +32,13 @@ const addSignature = () => {
 
 const validateForm = () => {
   let containsErrors = false;
-
   var petitionInputs = document.getElementById("sign-petition").elements;
+  console.log(petitionInputs);
+  let person = {
+    name: petitionInputs[0].value,
+    hometown: petitionInputs[1].value,
+    email: petitionInputs[2].value,
+  };
   // TODO: Loop through all inputs
   for (let i = 0; i < petitionInputs.length; i++) {
     if (petitionInputs[i].value.length < 2) {
@@ -51,8 +48,10 @@ const validateForm = () => {
       petitionInputs[i].classList.remove("error");
     }
   }
+
   if (containsErrors == false) {
-    addSignature();
+    addSignature(person);
+    toggleModal(person);
     for (let i = 0; i < petitionInputs.length; i++) {
       petitionInputs[i].value = "";
       containsErrors = false;
@@ -93,3 +92,30 @@ const reveal = () => {
 };
 
 window.addEventListener("scroll", reveal);
+
+const toggleModal = (person) => {
+  const modal = document.getElementById("thanks-modal");
+  const modalcontent = document.getElementById("thanks-modal-content");
+  modal.style.display = "flex";
+  modalcontent.textContent = `Thank you so much ${person.name}! ${person.hometown} represent!`;
+  setTimeout(() => {
+    modal.style.display = "none";
+  }, 4000);
+  let intervalId = setInterval(() => {
+    scaleImage();
+  }, 500);
+  setTimeout(() => {
+    clearInterval(intervalId);
+  }, 5000);
+};
+
+let scaleFactor = 1;
+let modalImage = document.getElementById("modal-img");
+const scaleImage = () => {
+  if (scaleFactor === 1) {
+    scaleFactor = 0.8;
+  } else {
+    scaleFactor = 1;
+  }
+  modalImage.style.transform = `scale(${scaleFactor})`;
+};
